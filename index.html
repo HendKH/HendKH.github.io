@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desktop QR code challenge</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon-32x32.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&family=Space+Grotesk:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Outfit", sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: hsl(212, 45%, 89%);
+        width: 1440px;
+        box-shadow: 2px 8px 30px hsla(219, 15%, 55%, 0.5);
+      }
+
+      .QR-content {
+        background-color: hsl(0, 0%, 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 280px;
+        margin-top: 140px;
+        margin-bottom: 140px;
+        padding: 10px 10px 40px 10px;
+        border-radius: 10px;
+        box-shadow: 2px 2px 20px hsla(219, 15%, 55%, 0.251);
+        /* the width is nearly the 1/5 of the container : 1440px/5=288px */
+      }
+      .QR-content * {
+        text-align: center;
+      }
+      img {
+        width: 100%;
+        margin-bottom: 20px;
+        border-radius: 10px;
+      }
+      h1 {
+        font-size: 20px;
+        color: hsl(218, 44%, 22%);
+        margin-bottom: 17px;
+      }
+      p {
+        font-size: 15px;
+        color: hsl(220, 15%, 55%);
+      }
+      /* For mobile phones: */
+      @media (max-width: 375px) {
+        .container {
+          width: 375px;
+          height: auto;
+        }
+        .QR-content {
+          margin-top: 40px;
+          margin-bottom: 40px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="QR-content">
+        <img src="images/image-qr-code.png" alt="QR-img" />
+        <h1>Improve your front-end skills by building projects</h1>
+        <p>
+          Scan the QR code to visit Frontend Mentor and take your coding skills
+          to the next level
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
